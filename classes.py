@@ -84,21 +84,34 @@ class plataformas:
         self.tag = 'block'
 
     def __draw__(self, frame):
-        pygame.draw.rect(frame, (0, 255, 0), self.rect) #dibuja el rectangulo, con el color que uno elija
+        pygame.draw.rect(frame, (255, 255, 255), self.rect) #dibuja el rectangulo, con el color que uno elija
 
 #clase que pone todos los elementos del juego juntos en la pantalla
 class Juego():
     def __init__(self, frame): # de entrada tiene la variable que contiene a la pantalla
         self.frame = frame
         self.player = Player(0,500)
-        self.platforms = [plataformas(0, 625, 1000, 25), plataformas(100, 550, 200, 25), plataformas(600, 400, 200, 25)]
-        #self.plataforms = [0]
-    #metodo que tiene por entrada el nivel del juego y crea las plataformas debidas
-    #def niveles(self, level):
-        #if level ==1:
-            #self.plataforms =+
-    def respawn(self):
-        self.player = Player(0, 500)
+        self.x_plat = 100
+        self.y_plat = 550
+        self.W_plat = 600
+        self.H_plat = 25
+
+        self.level = 1
+
+        self.base = plataformas(0,625,1000,25)
+
+        self.p1 = plataformas(self.x_plat,self.y_plat,self.W_plat,self.H_plat)
+
+        self.p2 = plataformas(self.x_plat+600,self.y_plat-100,self.W_plat-400,self.H_plat)
+
+        self.p3 = plataformas(self.x_plat-80,self.y_plat-170,self.W_plat-50,self.H_plat)
+
+        self.p4 =  plataformas(self.x_plat+600,self.y_plat-300,self.W_plat-400,self.H_plat)
+
+        self.p_Final =  plataformas(self.x_plat-80,self.y_plat-400,self.W_plat-50,self.H_plat)
+
+        self.plat_L1 = [self.base, self.p1, self.p2, self.p3, self.p4, self.p_Final]
+
 
     def __update__(self, event):
         if event.type == pygame.KEYUP: #si se suelta una tecla
@@ -118,23 +131,25 @@ class Juego():
             self.player.sprite_index = -1
 
             if event.key == pygame.K_SPACE or event.key == pygame.K_UP: # si es el espacio, o la tecla de arriba, salta
-                pass
-
+                self.level += 1
+                print(self.level)
     def __draw__(self): #metodo que dibuja el personaje
+
         playerFalling = True
-        for platform in self.platforms:
+        for platform in self.plat_L1:
             if self.player.rect.colliderect(platform.rect):
                 playerFalling = False
 
         if playerFalling:
             self.player.rect.top += 5
 
-        self.frame.fill((0, 0, 255)) # fondo del juego
+        self.fondo = pygame.image.load("data/bg.jpg")
+        self. frame.blit(self.fondo, (0,0))# fondo del juego
         self.player.__update__() # actualiza el jugador
         self.player.__draw__(self.frame) # dibuja el jugador
-        for platform in self.platforms: # dibuja todas las plataformas
+        for platform in self.plat_L1: # dibuja todas las plataformas
             platform.__draw__(self.frame)
-        time.sleep(0.09) # delay de 0.09s
+        time.sleep(0.009) # delay de 0.09s
 
 
 

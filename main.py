@@ -16,7 +16,7 @@ def main():
     clock = pygame.time.Clock()
 
     pantalla_juego = Juego(screen)
-
+    Juego.level = 1
     while flag_juego:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
