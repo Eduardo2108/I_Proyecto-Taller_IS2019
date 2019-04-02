@@ -1,28 +1,29 @@
-# Libraries
+#importa pygame, e importa los demas archivos del juego
+
 import pygame
 from classes import *
 
-# Settings
+#Inicia pygame
 pygame.init()
-displayWidth = 1000
-displayHeight = 650
-
+WIDTH = 1000
+HEIGHT = 650
+#Bucle principal del juego...
 def main():
-    displayFlag = True
 
-    frame = pygame.display.set_mode((displayWidth, displayHeight))
+    flag_juego = True
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption('Donkey Kong')
     clock = pygame.time.Clock()
 
-    game_screen = GameScreen(frame)
+    pantalla_juego = Juego(screen)
 
-    while displayFlag:
+    while flag_juego:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                displayFlag = False
+                flag_juego = False
 
-            game_screen.__update__(event)
-        game_screen.__draw__()
+            pantalla_juego.__update__(event)
+        pantalla_juego.__draw__()
 
         pygame.display.flip()
         clock.tick(30)

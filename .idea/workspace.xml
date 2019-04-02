@@ -10,13 +10,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="200">
+              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
-                <element signature="e#12#25#0" expanded="true" />
+                <element signature="e#57#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -25,21 +25,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="247">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#12#25#0" expanded="true" />
-                <element signature="e#138#3005#0" />
+                <element signature="e#187#3373#0" />
+                <element signature="e#259#1861#0" />
+                <element signature="e#1880#2652#0" />
+                <element signature="e#1941#2173#0" />
+                <element signature="e#1741#1848#0" />
+                <element signature="e#2275#2652#0" />
+                <element signature="e#2316#2399#0" />
+                <element signature="e#2510#2672#0" />
+                <element signature="e#2707#3168#0" />
+                <element signature="e#2926#3168#0" />
+                <element signature="e#2909#3055#0" />
+                <element signature="e#3173#3252#0" />
+                <element signature="e#3629#3726#0" />
+                <element signature="e#3913#4101#0" />
+                <element signature="e#4106#4185#0" />
+                <element signature="e#3616#3646#0" />
+                <element signature="e#4174#5238#0" />
+                <element signature="e#4241#4552#0" />
+                <element signature="e#4317#4391#0" />
+                <element signature="e#4549#4624#0" />
+                <element signature="e#4767#5238#0" />
+                <element signature="e#4842#4915#0" />
+                <element signature="e#5271#5345#0" />
+                <element signature="e#5633#6200#0" />
+                <element signature="e#4631#4716#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_24.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -53,60 +67,37 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/scratches/game_back.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/game.py" />
         <option value="$PROJECT_DIR$/game.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/classes.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_24.py" />
+        <option value="$PROJECT_DIR$/classes.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="132" />
+    <option name="y" value="-10" />
     <option name="width" value="979" />
     <option name="height" value="1090" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Proyecto de Taller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="Proyecto de Taller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Proyecto de Taller" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch_24">
+  <component name="RunManager" selected="Python.main">
     <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Proyecto de Taller" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,6 +179,9 @@
       <module name="Proyecto de Taller" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -204,7 +198,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scratch_24" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.scratch_24" />
         <item itemvalue="Python.scratch_24" />
         <item itemvalue="Python.scratch_24" />
@@ -226,14 +220,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5006519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34765625" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34639695" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997396" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -241,7 +236,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.3294271" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32869786" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -259,58 +254,10 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/game.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="49" lean-forward="true" selection-start-line="16" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="94" lean-forward="true" selection-start-line="16" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/Platform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="35" lean-forward="true" selection-start-line="21" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/screenManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1280">
-          <caret line="64" lean-forward="true" selection-start-line="20" selection-end-line="64" />
-          <folding>
-            <element signature="e#274#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#12#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
-          <folding>
-            <element signature="e#12#25#0" expanded="true" />
-            <element signature="e#138#3005#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/main.py" />
+    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/Player.py" />
+    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/Platform.py" />
+    <entry file="file://$PROJECT_DIR$/../Donkey_Kong-master/Donkey_Kong-master/screenManager.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -322,6 +269,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#187#3373#0" />
+            <element signature="e#259#1861#0" />
+            <element signature="e#1880#2652#0" />
+            <element signature="e#1941#2173#0" />
+            <element signature="e#1741#1848#0" />
+            <element signature="e#2275#2652#0" />
+            <element signature="e#2316#2399#0" />
+            <element signature="e#2510#2672#0" />
+            <element signature="e#2707#3168#0" />
+            <element signature="e#2926#3168#0" />
+            <element signature="e#2909#3055#0" />
+            <element signature="e#3173#3252#0" />
+            <element signature="e#3629#3726#0" />
+            <element signature="e#3913#4101#0" />
+            <element signature="e#4106#4185#0" />
+            <element signature="e#3616#3646#0" />
+            <element signature="e#4174#5238#0" />
+            <element signature="e#4241#4552#0" />
+            <element signature="e#4317#4391#0" />
+            <element signature="e#4549#4624#0" />
+            <element signature="e#4767#5238#0" />
+            <element signature="e#4842#4915#0" />
+            <element signature="e#5271#5345#0" />
+            <element signature="e#5633#6200#0" />
+            <element signature="e#4631#4716#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <element signature="e#57#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
