@@ -13,7 +13,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="180">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#57#70#0" expanded="true" />
@@ -25,26 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
-              <folding>
-                <element signature="e#187#3340#0" />
-                <element signature="e#258#1844#0" />
-                <element signature="e#1880#2619#0" />
-                <element signature="e#1956#2188#0" />
-                <element signature="e#1997#2104#0" />
-                <element signature="e#2275#2619#0" />
-                <element signature="e#2316#2399#0" />
-                <element signature="e#2457#2619#0" />
-                <element signature="e#2919#3145#0" />
-                <element signature="e#3194#3340#0" />
-                <element signature="e#4200#4645#0" />
-                <element signature="e#4303#4418#0" />
-                <element signature="e#4570#4645#0" />
-                <element signature="e#4854#4927#0" />
-                <element signature="e#5067#5141#0" />
-                <element signature="e#5465#5550#0" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="160" selection-start-line="160" selection-end-line="160" />
             </state>
           </provider>
         </entry>
@@ -74,7 +56,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="131" />
+    <option name="x" value="130" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1090" />
@@ -233,7 +215,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5006519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -277,19 +258,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../donkey-kong-master/donkey-kong-master/level.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../fg/Donkey-Kong-master/donkeykong.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../donkey-kong-master/donkey-kong-master/level.py" />
+    <entry file="file://$PROJECT_DIR$/../../fg/Donkey-Kong-master/donkeykong.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -299,7 +269,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="180">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#57#70#0" expanded="true" />
@@ -309,26 +279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
-          <folding>
-            <element signature="e#187#3340#0" />
-            <element signature="e#258#1844#0" />
-            <element signature="e#1880#2619#0" />
-            <element signature="e#1956#2188#0" />
-            <element signature="e#1997#2104#0" />
-            <element signature="e#2275#2619#0" />
-            <element signature="e#2316#2399#0" />
-            <element signature="e#2457#2619#0" />
-            <element signature="e#2919#3145#0" />
-            <element signature="e#3194#3340#0" />
-            <element signature="e#4200#4645#0" />
-            <element signature="e#4303#4418#0" />
-            <element signature="e#4570#4645#0" />
-            <element signature="e#4854#4927#0" />
-            <element signature="e#5067#5141#0" />
-            <element signature="e#5465#5550#0" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
         </state>
       </provider>
     </entry>

@@ -110,7 +110,10 @@ class Juego():
 
         self.p_Final =  plataformas(self.x_plat-80,self.y_plat-400,self.W_plat-50,self.H_plat)
 
-        self.plat_L1 = [self.base, self.p1, self.p2, self.p3, self.p4, self.p_Final]
+        self.plat_L1 = [self.base, self.p1, self.p_Final]
+        self.plat_L2 = [self.base, self.p1, self.p2, self.p3, self.p4, self.p_Final]
+        self.plat_L3 = [self.base, self.p1, self.p2, self.p3, self.p4, self.p_Final]
+        self.plat_L4 = [self.base, self.p1, self.p2, self.p3, self.p4, self.p_Final]
 
 
     def __update__(self, event):
@@ -146,10 +149,23 @@ class Juego():
         self.fondo = pygame.image.load("data/bg.jpg")
         self. frame.blit(self.fondo, (0,0))# fondo del juego
         self.player.__update__() # actualiza el jugador
-        self.player.__draw__(self.frame) # dibuja el jugador
-        for platform in self.plat_L1: # dibuja todas las plataformas
-            platform.__draw__(self.frame)
-        time.sleep(0.009) # delay de 0.09s
+        self.player.__draw__(self.frame)# dibuja el jugador
+
+        if self.level == 1:
+            for platform in self.plat_L1: # dibuja todas las plataformas
+                platform.__draw__(self.frame)
+            time.sleep(0.009) # delay de 0.09s
+        elif self.level ==2:
+            for platform in self.plat_L2:
+                platform.__draw__(self.frame)
+        elif self.level ==3:
+            for platform in self.plat_L3:
+                platform.__draw__(self.frame)
+        elif self.level == 4:
+            for platform in self.plat_L4:
+                platform.__draw__(self.frame)
+
+
 
 
 
