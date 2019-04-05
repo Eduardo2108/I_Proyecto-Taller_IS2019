@@ -1,25 +1,25 @@
 from classes import *
-transColor = pygame.Color(100, 100, 100)
+transColor = pygame.Color(0,0,0)
 class Player:
     def __init__(self, x, y): #crea el jugador en una posicion x,y
         self.spriteSheet = pygame.image.load('data/playerSheet.png') #carga el sprite de mario...
 
         # Sprite que se usa cuando quieto
-        self.spriteSheet.set_clip(27, 37, 75, 125)
+        self.spriteSheet.set_clip(0, 0, 34, 49)
         self.standing = self.spriteSheet.subsurface(self.spriteSheet.get_clip()).convert()
         self.standing.set_colorkey(transColor)
 
         # los sprites que se usan cuando hay movimiento hacia los lados
-        self.spriteSheet.set_clip(25, 205, 75, 125)
+        self.spriteSheet.set_clip(110, 3, 35, 45)
         walking1 = self.spriteSheet.subsurface(self.spriteSheet.get_clip()).convert()
         walking1.set_colorkey(transColor)
-        self.spriteSheet.set_clip(155, 201, 75, 125)
+        self.spriteSheet.set_clip(143, 6, 46, 43)
         walking2 = self.spriteSheet.subsurface(self.spriteSheet.get_clip()).convert()
         walking2.set_colorkey(transColor)
-        self.spriteSheet.set_clip(285, 198, 75, 125)
+        self.spriteSheet.set_clip(190, 1, 39, 48)
         walking3 = self.spriteSheet.subsurface(self.spriteSheet.get_clip()).convert()
         walking3.set_colorkey(transColor)
-        self.spriteSheet.set_clip(416, 205, 75, 125)
+        self.spriteSheet.set_clip(228, 2, 47, 49)
         walking4 = self.spriteSheet.subsurface(self.spriteSheet.get_clip()).convert()
         walking4.set_colorkey(transColor)
         self.walking = [walking1, walking2, walking3, walking4]
@@ -55,7 +55,7 @@ class Player:
                 self.sprite = pygame.transform.flip(self.sprite, True, False)
 
     def __draw__(self, frame): #dibuja a mario en la pantalla segun si camina o no
-        pygame.draw.rect(frame, (255, 0, 0), self.rect)
+       #pygame.draw.rect(frame, (255, 0, 0), self.rect)
         if self.action == 'standing':
             frame.blit(self.sprite, (self.rect.left, self.rect.top))
 

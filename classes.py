@@ -6,8 +6,6 @@ from player import *
 pygame.init()
 
 
-# Clase que define los parametros del jugador principal (mario)
-
 # clase que crea los parametros de las plataformas
 class plataformas:
     def __init__(self, x, y, width, height):
@@ -108,10 +106,6 @@ class Juego():
         elif self.level == 4:
             for platform in self.plat_L4:
                 platform.__draw__(self.frame)
-
-
-
-
 
 # Cierra pygame...
 pygame.quit()
