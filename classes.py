@@ -40,6 +40,8 @@ class Player:
         self.state = 'right'#cuando si camina
         self.jumpTime = 1.5
         self.tag = 'player' # etiqueta, que lo identifica en el juego
+        self.falling = True
+        self.jump = 0
 
     def __update__(self):
         if self.action == 'standing': #le dice que hacer si esta quieto
@@ -50,11 +52,11 @@ class Player:
                 self.sprite = self.standing
         elif self.action == 'walking': # le dice que hacer si camina o no
             if self.state == 'left':
-                self.rect.left -= 7
+                self.rect.left -= 12
                 self.sprite = self.__get_sprite__(self.walking)
 
             elif self.state == 'right':
-                self.rect.right += 7
+                self.rect.right += 12
                 self.sprite = self.__get_sprite__(self.walking)
                 self.sprite = pygame.transform.flip(self.sprite, True, False)
 
@@ -117,6 +119,8 @@ class Juego():
 
 
     def __update__(self, event):
+
+
         if event.type == pygame.KEYUP: #si se suelta una tecla
             if event.key == pygame.K_LEFT or event.key == pygame.K_a: # si son las de la izquierda
                 self.player.action = 'standing' #se queda quedito, viendo a la izquierda
@@ -134,8 +138,13 @@ class Juego():
             self.player.sprite_index = -1
 
             if event.key == pygame.K_SPACE or event.key == pygame.K_UP: # si es el espacio, o la tecla de arriba, salta
-                self.level += 1
-                print(self.level)
+                self.player.jump = 75
+                if self.player.falling and self.player.jump <= 0:
+                    self.player.rect.top +=55
+                elif self.player.jump > 0:
+                    self.player.rect.top -= 55
+                    self.player.jump -= 55
+
     def __draw__(self): #metodo que dibuja el personaje
 
         playerFalling = True
