@@ -56,7 +56,7 @@ class Player:
 
 
     def __draw__(self, frame): #dibuja a mario en la pantalla segun si camina o no
-       #pygame.draw.rect(frame, (255, 0, 0), self.rect)
+        #pygame.draw.rect(frame, (255, 0, 0), self.rect)
         if self.action == 'standing':
             frame.blit(self.sprite, (self.rect.left, self.rect.top))
 
