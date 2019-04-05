@@ -138,12 +138,17 @@ class Juego():
             self.player.sprite_index = -1
 
             if event.key == pygame.K_SPACE or event.key == pygame.K_UP: # si es el espacio, o la tecla de arriba, salta
-                self.player.jump = 75
+
+                self.player.jump = 70
+
                 if self.player.falling and self.player.jump <= 0:
-                    self.player.rect.top +=55
+
+                    self.player.rect.top += 35
+
                 elif self.player.jump > 0:
+                    self.player.jump -= 5
                     self.player.rect.top -= 55
-                    self.player.jump -= 55
+
 
     def __draw__(self): #metodo que dibuja el personaje
 
