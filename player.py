@@ -1,5 +1,5 @@
 from classes import *
-transColor = pygame.Color(0,0,0)
+transColor = pygame.Color(255,0,0)
 class Player:
     def __init__(self, x, y): #crea el jugador en una posicion x,y
         self.spriteSheet = pygame.image.load('data/playerSheet.png') #carga el sprite de mario...
@@ -41,18 +41,19 @@ class Player:
         if self.action == 'standing': #le dice que hacer si esta quieto
             if self.state == 'left':
                 self.sprite = self.standing
-                self.sprite = pygame.transform.flip(self.standing, True, False)
+                self.sprite = self.standing
             elif self.state == 'right':
                 self.sprite = self.standing
+                self.sprite = pygame.transform.flip(self.sprite, True, False)
         elif self.action == 'walking': # le dice que hacer si camina o no
             if self.state == 'left':
-                self.rect.left -= 12
-                self.sprite = self.__get_sprite__(self.walking)
-
-            elif self.state == 'right':
-                self.rect.right += 12
+                self.rect.left -= 10
                 self.sprite = self.__get_sprite__(self.walking)
                 self.sprite = pygame.transform.flip(self.sprite, True, False)
+            elif self.state == 'right':
+                self.rect.right += 10
+                self.sprite = self.__get_sprite__(self.walking)
+
 
     def __draw__(self, frame): #dibuja a mario en la pantalla segun si camina o no
        #pygame.draw.rect(frame, (255, 0, 0), self.rect)
@@ -61,10 +62,10 @@ class Player:
 
         elif self.action == 'walking':
             if self.state == 'left':
-                frame.blit(self.sprite, (self.rect.left, self.rect.top + 10))
+                frame.blit(self.sprite, (self.rect.left, self.rect.top))
 
             elif self.state == 'right':
-                frame.blit(self.sprite, (self.rect.left - 16, self.rect.top + 10))
+                frame.blit(self.sprite, (self.rect.left, self.rect.top))
 
     def __get_sprite__(self, sprites):
         self.sprite_index += 1

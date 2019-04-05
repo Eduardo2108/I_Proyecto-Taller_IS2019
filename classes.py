@@ -24,11 +24,11 @@ class Juego():
         self.x_plat = 100
         self.y_plat = 550
         self.W_plat = 600
-        self.H_plat = 25
+        self.H_plat = 5
 
         self.level = 1
 
-        self.base = plataformas(0,625,1000,25)
+        self.base = plataformas(0,625,1000,5)
 
         self.p1 = plataformas(self.x_plat,self.y_plat,self.W_plat,self.H_plat)
 
