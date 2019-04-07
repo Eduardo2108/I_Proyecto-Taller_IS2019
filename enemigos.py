@@ -1,4 +1,5 @@
 import pygame
+
 class Enemy:
     def __init__(self, x, y, speed):
         # Settings
@@ -6,6 +7,7 @@ class Enemy:
         self.speed = speed
         self.falling = True
         self.dir = 'r'
+
     def __update__(self):
 
         if self.falling == True:

@@ -95,7 +95,7 @@ class Juego():
 
         for enemy in self.enemies:
             enemy.__update__()
-
+            enemy.falling = True
             for plat in self.level_plat:
                 if enemy.rect.colliderect(plat.rect):
                     enemy.falling = False
@@ -106,14 +106,14 @@ class Juego():
                     if enemy.rect.left == 1:
                         print('camina a la derecha ')
                         enemy.rect.left += 10
-                else:
-                    enemy.falling = True
-                    print('esta cayendo')
+               
 
 
 
         if playerFalling:
             self.player.rect.top += 15
+
+
 
         self.fondo = pygame.image.load("data/bg.jpg")
 
