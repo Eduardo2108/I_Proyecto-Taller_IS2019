@@ -4,20 +4,17 @@ class Enemy:
         # Settings
         self.rect = pygame.Rect(x, y, 64, 64)
         self.speed = speed
-        
+        self.falling = True
+        self.dir = 'r'
     def __update__(self):
 
-        self.rect.left += self.speed[0]
-        self.rect.top += self.speed[1]
+        if self.falling == True:
+            self.rect.top += 10
+        if self.dir == 'r':
+            self.rect.left += 10
+        elif self.dir =='l':
+            self.rect.left -= 10
 
-        if self.rect.left < -64:
-            self.rect.left = 760
-        elif self.rect.left > 760:
-            self.rect.left = -64
-        if self.rect.top < -64:
-            self.rect.top = 420
-        elif self.rect.top > 420:
-            self.rect.top = -64
 
     def __draw__(self, frame):
         pygame.draw.rect(frame, (255, 255, 0), self.rect)

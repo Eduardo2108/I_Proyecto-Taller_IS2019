@@ -36,7 +36,7 @@ class Player:
         self.tag = 'player' # etiqueta, que lo identifica en el juego
         self.falling = True
         self.jump = 0
-
+        self.state = True
     def __update__(self):
         if self.action == 'standing': #le dice que hacer si esta quieto
             if self.state == 'left':
@@ -72,3 +72,5 @@ class Player:
         if self.sprite_index >= (len(sprites)):
             self.sprite_index = 0
         return sprites[self.sprite_index]
+    def kill(self):
+        self.state = False

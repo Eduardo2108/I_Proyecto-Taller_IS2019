@@ -32,7 +32,7 @@ class Juego():
         self.flag = True
         self.level = 1
 
-        self.enemies = [Enemy(-64, 0, (3, -1)), Enemy(760, 100, (-5, 1))]
+        self.enemies = [Enemy(200, 0, (3, 3))]
 
         self.base = plataformas(0, 625, 1000, 5)
 
@@ -53,7 +53,6 @@ class Juego():
 
     def __update__(self, event):
 
-
         if event.type == pygame.KEYUP: #si se suelta una tecla
             if event.key == pygame.K_LEFT or event.key == pygame.K_a: # si son las de la izquierda
                 self.player.action = 'standing' #se queda quedito, viendo a la izquierda
@@ -61,6 +60,7 @@ class Juego():
             if event.key == pygame.K_RIGHT or event.key == pygame.K_d: #si son las de la derecha, se queda quieto, viendo a la derecha
                 self.player.action = 'standing'
                 self.player.state = 'right'
+
         if event.type == pygame.KEYDOWN: # si se presiona una tecla
             if event.key == pygame.K_LEFT or event.key == pygame.K_a: #si son las de la izquierda,camina hacia la izquierda
                 self.player.action = 'walking'
@@ -70,32 +70,48 @@ class Juego():
                 self.player.state = 'right'
             self.player.sprite_index = -1
 
-            if event.key == pygame.K_SPACE or event.key == pygame.K_UP: # si es el espacio, o la tecla de arriba, salta
+            if event.key == pygame.K_SPACE or event.key == pygame.K_UP and Player.jump > 0: # si es el espacio, o la tecla de arriba, salta
 
                 self.player.jump = 150
 
-                if self.player.falling and self.player.jump <= 0:
+                if self.player.falling and self.player.jump <= 0 :
 
                     self.player.rect.top += 80
 
                 elif self.player.jump > 0:
                     self.player.jump -= 1
                     self.player.rect.top -= 80
-        for enemy in self.enemies:
-            enemy.__update__()
+
+
 
 
     def __draw__(self): #metodo que dibuja el personaje
 
         playerFalling = True
 
-        for platform in self.plat_L1:
+        for platform in self.level_plat:
             if self.player.rect.colliderect(platform.rect):
                 playerFalling = False
 
-        for barril in self.enemies:
-            if self.player.rect.colliderect(barril.rect):
-                print("died")
+        for enemy in self.enemies:
+            enemy.__update__()
+
+            for plat in self.level_plat:
+                if enemy.rect.colliderect(plat.rect):
+                    enemy.falling = False
+                    print('esta tocando')
+                    enemy.stat = 1
+                    if self.player.rect.colliderect(enemy.rect):
+                        print("died")
+                    if enemy.rect.left == 1:
+                        print('camina a la derecha ')
+                        enemy.rect.left += 10
+                else:
+                    enemy.falling = True
+                    print('esta cayendo')
+
+
+
         if playerFalling:
             self.player.rect.top += 15
 
@@ -118,6 +134,7 @@ class Juego():
             self.level_plat = self.plat_L3
             for platform in self.level_plat:
                 platform.__draw__(self.frame)
+
         for enemy in self.enemies:
 
             enemy.__draw__(self.frame)

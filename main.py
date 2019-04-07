@@ -7,6 +7,7 @@ from classes import *
 pygame.init()
 WIDTH = 1000
 HEIGHT = 650
+
 #Bucle principal del juego...
 def main():
 
@@ -26,7 +27,7 @@ def main():
         pantalla_juego.__draw__()
 
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(10)
 
 main()
 
