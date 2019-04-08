@@ -45,7 +45,7 @@ class Juego():
 
         self.p_Final = plataformas(self.x_plat+150, self.y_plat-210, self.W_plat-50, self.H_plat)
         self.level_plat = []
-        self.plat_L1 = [self.base, plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat),plataformas(self.x_plat+10, self.y_plat-40, self.W_plat-100, self.H_plat),plataformas(self.x_plat+600, self.y_plat-110, self.W_plat-400, self.H_plat), plataformas(self.x_plat+110, self.y_plat-210, self.W_plat-50, self.H_plat)]
+        self.plat_L1 = [self.base, plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat),plataformas(self.x_plat+110, self.y_plat-40, self.W_plat-100, self.H_plat),plataformas(self.x_plat+600, self.y_plat-110, self.W_plat-400, self.H_plat), plataformas(self.x_plat+110, self.y_plat-210, self.W_plat-50, self.H_plat)]
 
         self.plat_L2 = [self.base, self.p1, self.p2,  self.p3, self.p_Final]
 
@@ -90,9 +90,7 @@ class Juego():
     def __draw__(self): #metodo que dibuja el personaje
 
         playerFalling = True
-        cantidad_plataformas = len(self.level_plat)
-        plataformas_medias = cantidad_plataformas - 2
-        counter = 0
+
         for platform in self.level_plat:
             if self.player.rect.colliderect(platform.rect):
                 playerFalling = False
@@ -109,10 +107,10 @@ class Juego():
                     if self.player.rect.colliderect(enemy.rect):
                         #metodo que mata al jugador
                         pass
-                    if enemy.rect.left >= 950 and not enemy.falling:
+                    if enemy.rect.left >= 770 and not enemy.falling:
                         enemy.dir = 'left'
                         print(enemy.x_pos)
-                    elif enemy.rect.left <= 0 and not enemy.falling:
+                    elif enemy.rect.left <= 245 and not enemy.falling:
                         enemy.dir = 'right'
                         print(enemy.x_pos)
 
