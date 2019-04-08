@@ -29,7 +29,7 @@ class Juego():
         self.y_plat = 350
         self.W_plat = 600
         self.X_enemies = 200
-        self.Y_enemies = 100
+        self.Y_enemies = 200
         self.H_plat = 5
         self.flag = True
         self.level = 1
@@ -68,7 +68,7 @@ class Juego():
                 self.player.state = 'right'
             self.player.sprite_index = -1
 
-            if event.key == pygame.K_SPACE or event.key == pygame.K_UP and Player.jump > 0: # si es el espacio, o la tecla de arriba, salta
+            if event.key == pygame.K_SPACE or event.key == pygame.K_UP : # si es el espacio, o la tecla de arriba, salta
 
                 self.player.jump = 150
 
@@ -112,7 +112,10 @@ class Juego():
                     elif enemy.rect.top >= 600:
                         enemy.dir = 'left'
                     elif enemy.rect.left <-10:
-                        
+                        pass
+
+
+
 
         if playerFalling:
             self.player.rect.top += 15
