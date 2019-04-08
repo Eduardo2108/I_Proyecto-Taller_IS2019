@@ -1,6 +1,8 @@
 from classes import *
 transColor = pygame.Color(255,0,0)
+
 class Player:
+
     def __init__(self, x, y): #crea el jugador en una posicion x,y
         self.spriteSheet = pygame.image.load('data/playerSheet.png') #carga el sprite de mario...
 
@@ -24,7 +26,6 @@ class Player:
         walking4.set_colorkey(transColor)
         self.walking = [walking1, walking2, walking3, walking4]
 
-
         # estados posibles de mario
         self.sprite = self.standing
         self.sprite_index = 0
@@ -37,6 +38,7 @@ class Player:
         self.falling = True
         self.jump = 0
         self.state = True
+
     def __update__(self):
         if self.action == 'standing': #le dice que hacer si esta quieto
             if self.state == 'left':

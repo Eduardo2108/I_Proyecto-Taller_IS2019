@@ -38,13 +38,20 @@ class Juego():
         self.p_Final = plataformas(self.x_plat+150, self.y_plat-210, self.W_plat-50, self.H_plat)
         self.level_plat = []
         #plataformas nivel 1
-        self.P1_l1 = plataformas(self.x_plat+600, self.y_plat+150, self.W_plat-400, self.H_plat)
-        self.P2_l1 = plataformas(self.x_plat+110, self.y_plat+100, self.W_plat-100, self.H_plat)
-        self.P3_l1 = plataformas(self.x_plat+600, self.y_plat+30, self.W_plat-400, self.H_plat)
-        self.P_Final_l1 = plataformas(self.x_plat+110, self.y_plat-50, self.W_plat-100, self.H_plat)
+        self.P1_l1 = plataformas(self.x_plat+600, self.y_plat+230, self.W_plat-400, self.H_plat)
+        self.P2_l1 = plataformas(self.x_plat+110, self.y_plat+150, self.W_plat-100, self.H_plat)
+        self.P3_l1 = plataformas(self.x_plat+600, self.y_plat+70, self.W_plat-400, self.H_plat)
+        self.P_Final_l1 = plataformas(self.x_plat+110, self.y_plat-30, self.W_plat-100, self.H_plat)
         self.plat_L1 = [self.base, self.P1_l1, self.P2_l1,self.P3_l1, self.P_Final_l1]
-
-
+        self.juego = True
+        #Plataformas nivel 2:
+        self.P1_l2 = plataformas(self.x_plat+600, self.y_plat-10, self.W_plat-400, self.H_plat)
+        self.P2_l2 = plataformas(self.x_plat+110, self.y_plat+80, self.W_plat-100, self.H_plat)
+        self.P3_l2 = plataformas(self.x_plat+600, self.y_plat+150, self.W_plat-400, self.H_plat)
+        self.P4_l2 = plataformas(self.x_plat+110, self.y_plat+50, self.W_plat-400, self.H_plat)
+        self.P5_l2 = plataformas(self.x_plat+600, self.y_plat-50, self.W_plat-400, self.H_plat)
+        self.P_Final_l2 = plataformas(self.x_plat+110, self.y_plat-80, self.W_plat-100, self.H_plat)
+        self.plat_L2 = [self.base, self.P1_l2, self.P2_l2,self.P3_l2, self.P_Final_l2]
 
 
     def make_enemy(self, level):
@@ -84,6 +91,9 @@ class Juego():
                     self.player.jump -= 1
                     self.player.rect.top -= 80
 
+            if not self.juego:
+                print('pierde')
+                return'lost'
 
 
 
@@ -107,17 +117,18 @@ class Juego():
                     if self.player.rect.colliderect(enemy.rect):
                         #metodo que mata al jugador
                         pass
-                    if enemy.rect.left >= 720 and not enemy.falling :
+                    if enemy.rect.left >= 780 and not enemy.falling:
                         enemy.dir = 'left'
-                        self.make_enemy(self.level)
-                        print(enemy.x_pos)
+                        if enemy.rect.top == 410:
+                            self.make_enemy(self.level)
+
                     elif enemy.rect.left <= 245 and not enemy.falling and enemy.rect.top < 600:
                         enemy.dir = 'right'
-                        print(enemy.x_pos)
+                        #print(enemy.x_pos)
                     elif enemy.rect.top >= 600:
                         enemy.dir = 'left'
                     elif enemy.rect.left <-10:
-                        pass
+                        self.juego = False
 
 
 
@@ -137,10 +148,6 @@ class Juego():
             time.sleep(0.009) # delay de 0.09s
         elif self.level == 2:
             self.level_plat = self.plat_L2
-            for platform in self.level_plat:
-                platform.__draw__(self.frame)
-        elif self.level == 3:
-            self.level_plat = self.plat_L3
             for platform in self.level_plat:
                 platform.__draw__(self.frame)
 

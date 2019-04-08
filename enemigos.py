@@ -7,7 +7,7 @@ class Enemy:
 
         self.falling = True
         self.dir = 'right'
-        self.vel = 10
+        self.vel = 15
         self.x_pos = x
         self.stat = 0
         self.image = pygame.image.load('data/barrel.png')
@@ -15,7 +15,7 @@ class Enemy:
         self.rect = pygame.Rect(x, y, 25, 25)
 
     def __update__(self):
-        print(self.rect.top)
+        print(self.rect.left, self.rect.top)
         if self.falling:
             self.rect.top += self.vel
 
@@ -29,9 +29,6 @@ class Enemy:
             self.dir ='left'
         elif self.x_pos <= 0:
             self.dir = 'right'
-
-
-
 
     def __draw__(self, frame):
         pygame.draw.rect(frame, (255, 255, 0), self.rect)
