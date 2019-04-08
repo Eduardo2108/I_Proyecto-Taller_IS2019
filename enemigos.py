@@ -15,7 +15,7 @@ class Enemy:
         self.rect = pygame.Rect(x, y, 25, 25)
 
     def __update__(self):
-        print(self.rect.left, self.rect.top)
+        #print(self.rect.left, self.rect.top)
         if self.falling:
             self.rect.top += self.vel
 

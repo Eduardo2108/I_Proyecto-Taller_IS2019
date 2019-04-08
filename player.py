@@ -55,17 +55,15 @@ class Player:
             elif self.state == 'right':
                 self.rect.right += 10
                 self.sprite = self.__get_sprite__(self.walking)
-
-
     def __draw__(self, frame): #dibuja a mario en la pantalla segun si camina o no
         #pygame.draw.rect(frame, (255, 0, 0), self.rect)
         if self.action == 'standing':
             frame.blit(self.sprite, (self.rect.left, self.rect.top))
 
         elif self.action == 'walking':
+
             if self.state == 'left':
                 frame.blit(self.sprite, (self.rect.left, self.rect.top))
-
             elif self.state == 'right':
                 frame.blit(self.sprite, (self.rect.left, self.rect.top))
 
@@ -74,5 +72,6 @@ class Player:
         if self.sprite_index >= (len(sprites)):
             self.sprite_index = 0
         return sprites[self.sprite_index]
-    def kill(self):
-        self.state = False
+    def kill():
+
+        print("pierde")
