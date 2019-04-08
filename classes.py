@@ -26,30 +26,26 @@ class Juego():
         self.frame = frame
         self.player = Player(0, 500)
         self.x_plat = 100
-        self.y_plat = 550
+        self.y_plat = 350
         self.W_plat = 600
         self.X_enemies = 200
-        self.Y_enemies = 75
+        self.Y_enemies = 100
         self.H_plat = 5
         self.flag = True
         self.level = 1
-
         self.enemies = [Enemy(self.X_enemies,self.Y_enemies)]
-
         self.base = plataformas(0, 625, 1000, 5)
-
-        self.p1 = plataformas(self.x_plat+600, self.y_plat+20, self.W_plat-400, self.H_plat)
-        self.p2 = plataformas(self.x_plat+10, self.y_plat-140, self.W_plat-100, self.H_plat)
-        self.p3 = plataformas(self.x_plat-80, self.y_plat-170, self.W_plat-50, self.H_plat)
-        self.p4 = plataformas(self.x_plat+600, self.y_plat-300, self.W_plat-400, self.H_plat)
-
         self.p_Final = plataformas(self.x_plat+150, self.y_plat-210, self.W_plat-50, self.H_plat)
         self.level_plat = []
-        self.plat_L1 = [self.base, plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat),plataformas(self.x_plat+110, self.y_plat-40, self.W_plat-100, self.H_plat),plataformas(self.x_plat+600, self.y_plat-110, self.W_plat-400, self.H_plat), plataformas(self.x_plat+110, self.y_plat-210, self.W_plat-50, self.H_plat)]
+        #plataformas nivel 1
+        self.P1_l1 = plataformas(self.x_plat+600, self.y_plat+150, self.W_plat-400, self.H_plat)
+        self.P2_l1 = plataformas(self.x_plat+110, self.y_plat+100, self.W_plat-100, self.H_plat)
+        self.P3_l1 = plataformas(self.x_plat+600, self.y_plat+30, self.W_plat-400, self.H_plat)
+        self.P_Final_l1 = plataformas(self.x_plat+110, self.y_plat-50, self.W_plat-100, self.H_plat)
+        self.plat_L1 = [self.base, self.P1_l1, self.P2_l1,self.P3_l1, self.P_Final_l1]
 
-        self.plat_L2 = [self.base, self.p1, self.p2,  self.p3, self.p_Final]
 
-        self.plat_L3 = [self.base, self.p1, self.p2, self.p3,self.p4,self.p_Final]
+
 
 
 
@@ -107,21 +103,21 @@ class Juego():
                     if self.player.rect.colliderect(enemy.rect):
                         #metodo que mata al jugador
                         pass
-                    if enemy.rect.left >= 770 and not enemy.falling:
+                    if enemy.rect.left >= 720 and not enemy.falling :
                         enemy.dir = 'left'
                         print(enemy.x_pos)
-                    elif enemy.rect.left <= 245 and not enemy.falling:
+                    elif enemy.rect.left <= 245 and not enemy.falling and enemy.rect.top < 600:
                         enemy.dir = 'right'
                         print(enemy.x_pos)
-
+                    elif enemy.rect.top >= 600:
+                        enemy.dir = 'left'
+                    elif enemy.rect.left <-10:
+                        
 
         if playerFalling:
             self.player.rect.top += 15
 
-
-
         self.fondo = pygame.image.load("data/bg.jpg")
-
         self. frame.blit(self.fondo, (0,0))# fondo del juego
         self.player.__update__() # actualiza el jugador
         self.player.__draw__(self.frame)# dibuja el jugador

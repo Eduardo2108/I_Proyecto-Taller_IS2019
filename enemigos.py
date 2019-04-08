@@ -3,22 +3,22 @@ import pygame
 class Enemy:
     def __init__(self, x, y):
         # Settings
-        self.rect = pygame.Rect(x, y, 50, 50)
+        self.rect = pygame.Rect(x, y, 25, 25)
 
         self.falling = True
         self.dir = 'right'
-        self.vel = 15
+        self.vel = 20
         self.x_pos = x
         self.stat = 0
     def __update__(self):
-        print(self.rect.left)
+        print(self.rect.top)
         if self.falling:
             self.rect.top += 10
-            print(self.x_pos)
+
         if not self.falling:
             if self.dir == 'right':
                 self.rect.left += self.vel
-                print(self.x_pos)
+
             else:
                 self.rect.left -= self.vel
         if self.x_pos >= 600:
