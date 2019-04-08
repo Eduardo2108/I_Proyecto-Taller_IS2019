@@ -28,22 +28,24 @@ class Juego():
         self.x_plat = 100
         self.y_plat = 550
         self.W_plat = 600
+        self.X_enemies = 200
+        self.Y_enemies = 75
         self.H_plat = 5
         self.flag = True
         self.level = 1
 
-        self.enemies = [Enemy(200, 0, (3, 3))]
+        self.enemies = [Enemy(self.X_enemies,self.Y_enemies)]
 
         self.base = plataformas(0, 625, 1000, 5)
 
-        self.p1 = plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat)
+        self.p1 = plataformas(self.x_plat+600, self.y_plat+20, self.W_plat-400, self.H_plat)
         self.p2 = plataformas(self.x_plat+10, self.y_plat-140, self.W_plat-100, self.H_plat)
         self.p3 = plataformas(self.x_plat-80, self.y_plat-170, self.W_plat-50, self.H_plat)
         self.p4 = plataformas(self.x_plat+600, self.y_plat-300, self.W_plat-400, self.H_plat)
 
-        self.p_Final = plataformas(self.x_plat+10, self.y_plat-210, self.W_plat-50, self.H_plat)
+        self.p_Final = plataformas(self.x_plat+150, self.y_plat-210, self.W_plat-50, self.H_plat)
         self.level_plat = []
-        self.plat_L1 = [self.base, plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat),plataformas(self.x_plat+10, self.y_plat-40, self.W_plat-100, self.H_plat),plataformas(self.x_plat+600, self.y_plat-110, self.W_plat-400, self.H_plat), plataformas(self.x_plat+10, self.y_plat-210, self.W_plat-50, self.H_plat)]
+        self.plat_L1 = [self.base, plataformas(self.x_plat+550, self.y_plat+20, self.W_plat-400, self.H_plat),plataformas(self.x_plat+10, self.y_plat-40, self.W_plat-100, self.H_plat),plataformas(self.x_plat+600, self.y_plat-110, self.W_plat-400, self.H_plat), plataformas(self.x_plat+110, self.y_plat-210, self.W_plat-50, self.H_plat)]
 
         self.plat_L2 = [self.base, self.p1, self.p2,  self.p3, self.p_Final]
 
@@ -88,7 +90,9 @@ class Juego():
     def __draw__(self): #metodo que dibuja el personaje
 
         playerFalling = True
-
+        cantidad_plataformas = len(self.level_plat)
+        plataformas_medias = cantidad_plataformas - 2
+        counter = 0
         for platform in self.level_plat:
             if self.player.rect.colliderect(platform.rect):
                 playerFalling = False
@@ -96,18 +100,21 @@ class Juego():
         for enemy in self.enemies:
             enemy.__update__()
             enemy.falling = True
+
             for plat in self.level_plat:
+
                 if enemy.rect.colliderect(plat.rect):
                     enemy.falling = False
-                    print('esta tocando')
-                    enemy.stat = 1
-                    if self.player.rect.colliderect(enemy.rect):
-                        print("died")
-                    if enemy.rect.left == 1:
-                        print('camina a la derecha ')
-                        enemy.rect.left += 10
-               
 
+                    if self.player.rect.colliderect(enemy.rect):
+                        #metodo que mata al jugador
+                        pass
+                    if enemy.rect.left >= 950 and not enemy.falling:
+                        enemy.dir = 'left'
+                        print(enemy.x_pos)
+                    elif enemy.rect.left <= 0 and not enemy.falling:
+                        enemy.dir = 'right'
+                        print(enemy.x_pos)
 
 
         if playerFalling:

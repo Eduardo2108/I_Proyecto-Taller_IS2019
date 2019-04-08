@@ -27,7 +27,7 @@ def main():
         pantalla_juego.__draw__()
 
         pygame.display.flip()
-        clock.tick(10)
+        clock.tick(60)
 
 main()
 
