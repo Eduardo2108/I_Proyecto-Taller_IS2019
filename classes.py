@@ -47,6 +47,10 @@ class Juego():
 
 
 
+    def make_enemy(self, level):
+
+        if level == 1:
+            self.enemies += [Enemy(self.X_enemies,self.Y_enemies)]
 
 
     def __update__(self, event):
@@ -105,6 +109,7 @@ class Juego():
                         pass
                     if enemy.rect.left >= 720 and not enemy.falling :
                         enemy.dir = 'left'
+                        self.make_enemy(self.level)
                         print(enemy.x_pos)
                     elif enemy.rect.left <= 245 and not enemy.falling and enemy.rect.top < 600:
                         enemy.dir = 'right'
